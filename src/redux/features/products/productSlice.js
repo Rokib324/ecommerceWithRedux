@@ -28,6 +28,15 @@ const initialState = [
         quantity: 3,
         image: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHN8ZW58MHx8MHx8fDA%3D',
         description: 'This is a product description'
+    },
+    {
+        id: 4,
+        name: 'Product 4',
+        price: 400,
+        category: 'Category 4',
+        quantity: 4,
+        image: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHN8ZW58MHx8MHx8fDA%3D',
+        description: 'This is a product description'
     }
 ]
 const productSlice = createSlice({
