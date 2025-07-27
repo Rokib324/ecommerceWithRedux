@@ -1,9 +1,16 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { addToCart } from '../../redux/features/carts/cartSlice'
 
 const Products = () => {
+  const {id, name, price,quantity, image} = useSelector((state) => state.products)
   const products = useSelector((state) => state.products)
 
+  const dispatch = useDispatch()
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product))
+  }
+  
   if (products.length === 0) {
     return (
       <div className="text-center text-gray-500 py-16">
@@ -28,7 +35,7 @@ const Products = () => {
             <h2 className="card-title">{product.name}</h2>
             <p className="text-sm text-gray-600">${product.price}</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+              <button onClick={() => handleAddToCart(product)} className="btn btn-primary">Buy Now</button>
             </div>
           </div>
         </div>
