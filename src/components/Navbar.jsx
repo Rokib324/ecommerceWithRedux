@@ -11,7 +11,7 @@ const Navbar = () => {
   <div className="flex space-x-4">
     <div className='flex space-x-4'>
       <Link to="/" >Home</Link>
-      <Link to="/products" >Products</Link>
+
       
     </div>
     <div className="dropdown dropdown-end">

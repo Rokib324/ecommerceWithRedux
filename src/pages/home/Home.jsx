@@ -5,7 +5,7 @@ import AddProducts from '../products/AddProducts'
 
 const Home = () => {
   const products = useSelector((state) => state.products)
-
+  console.log(products)
   return (
     <div className="py-10 px-6 bg-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
